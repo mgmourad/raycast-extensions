@@ -1,0 +1,60 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "open-in-bloom",
+  "title": "Open in Bloom",
+  "description": "Open files and folders in Bloom instead of Finder. Use as a Fallback Command for Raycast's native File Search to redirect results to Bloom.",
+  "icon": "extension-icon.png",
+  "author": "mgmourad",
+  "categories": ["Productivity", "System"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search-and-open-in-bloom",
+      "title": "Search and Open in Bloom",
+      "description": "Search files using Spotlight and open them in Bloom. Best used as a Fallback Command.",
+      "mode": "view",
+      "keywords": ["bloom", "finder", "files", "folders", "search", "open"]
+    },
+    {
+      "name": "open-finder-selection-in-bloom",
+      "title": "Open Finder Selection in Bloom",
+      "description": "Send the currently selected Finder items to Bloom",
+      "mode": "no-view",
+      "keywords": ["bloom", "finder", "reveal", "selection"]
+    },
+    {
+      "name": "open-clipboard-path-in-bloom",
+      "title": "Open Clipboard Path in Bloom",
+      "description": "Open a file path from clipboard or selected text in Bloom",
+      "mode": "no-view",
+      "keywords": ["bloom", "clipboard", "path", "paste"]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "bloomAppName",
+      "title": "Bloom Application Name",
+      "description": "The name of the Bloom app as it appears in your Applications folder",
+      "type": "textfield",
+      "default": "Bloom",
+      "required": false
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.83.1",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/node": "22.5.4",
+    "@types/react": "18.3.3",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "build": "ray build --skip-types -e dist -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  }
+}
